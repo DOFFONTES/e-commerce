@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/model', function (){
+    $users = \App\User::all();
+
+    return $users;
+});
